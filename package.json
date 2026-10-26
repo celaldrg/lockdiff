@@ -1,0 +1,23 @@
+{
+  "name": "lockdiff",
+  "version": "0.1.0",
+  "description": "Readable diffs for lockfiles: see which dependencies were added, removed, upgraded or downgraded, with major bumps flagged. npm, pnpm, yarn, Cargo, Go, Poetry, uv, Pipfile, Composer, Bundler.",
+  "type": "module",
+  "bin": { "lockdiff": "dist/src/cli.js" },
+  "main": "dist/src/index.js",
+  "files": ["dist"],
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "tsc -p . && node -e \"require('fs').chmodSync('dist/src/cli.js',0o755)\"",
+    "test": "npm run build && node --test",
+    "prepare": "npm run build"
+  },
+  "keywords": ["lockfile", "dependencies", "diff", "package-lock", "cargo", "go-sum", "pnpm", "yarn", "code-review", "cli"],
+  "repository": { "type": "git", "url": "git+https://github.com/celaldrg/lockdiff.git" },
+  "author": "Celalettin Durğaç",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}
