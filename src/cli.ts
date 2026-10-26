@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { existsSync, readFileSync, statSync } from "node:fs";
-import { relative, resolve } from "node:path";
+import { resolve } from "node:path";
 import { diffLocked } from "./diff.js";
 import { KINDS, kindFor, type Locked } from "./parsers.js";
 import { render, type FileDiff } from "./render.js";
@@ -97,7 +97,7 @@ function main(argv: string[]): number {
       const afterText = to ? showAt(to, file, root) : existsSync(resolve(root, file)) ? readFileSync(resolve(root, file), "utf8") : null;
       const after = parseLock(file, afterText);
       const result = diffLocked(before, after);
-      if (result.changes.length) files.push({ file: relative(cwd, resolve(root, file)) || file, ecosystem: kind.ecosystem, result });
+      if (result.changes.length) files.push({ file, ecosystem: kind.ecosystem, result }); // path relative to the repo root
     }
   }
 

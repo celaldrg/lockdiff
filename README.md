@@ -107,7 +107,7 @@ lockdiff <old-file> <new-file>  compare two lockfiles directly
   --no-color            disable colors
 ```
 
-In ref modes lockdiff asks git which files changed, so it finds every lockfile in a monorepo (`apps/web/pnpm-lock.yaml`,
+In ref modes paths are shown relative to the repository root. lockdiff asks git which files changed, so it finds every lockfile in a monorepo (`apps/web/pnpm-lock.yaml`,
 `services/api/go.sum`, ...) without configuration.
 
 Exit codes: `0` ok, `1` the `--fail-on` gate was hit, `2` usage or parse error.

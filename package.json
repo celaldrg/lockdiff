@@ -9,7 +9,7 @@
   "engines": { "node": ">=20" },
   "scripts": {
     "build": "tsc -p . && node -e \"require('fs').chmodSync('dist/src/cli.js',0o755)\"",
-    "test": "npm run build && node --test",
+    "test": "npm run build && node --test dist/test/parsers.test.js dist/test/diff.test.js dist/test/cli.test.js",
     "prepare": "npm run build"
   },
   "keywords": ["lockfile", "dependencies", "diff", "package-lock", "cargo", "go-sum", "pnpm", "yarn", "code-review", "cli"],
