@@ -87,7 +87,7 @@ $ lockdiff 14.0.0 14.1.1 --fail-on major > /dev/null; echo $?
 ```sh
 npx github:celaldrg/lockdiff --help
 # or
-npm install -g github:celaldrg/lockdiff
+npm install -g https://github.com/celaldrg/lockdiff/releases/download/v0.1.0/lockdiff-0.1.0.tgz
 ```
 
 Node.js 20 or newer. No runtime dependencies. `git` is needed for the ref modes.
