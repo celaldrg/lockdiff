@@ -1,10 +1,14 @@
-# lockdiff
+<p align="center">
+  <img src="assets/banner.webp" alt="lockdiff" width="100%">
+</p>
 
-[![CI](https://github.com/celaldrg/lockdiff/actions/workflows/ci.yml/badge.svg)](https://github.com/celaldrg/lockdiff/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Release](https://img.shields.io/github/v/release/celaldrg/lockdiff?sort=semver)](https://github.com/celaldrg/lockdiff/releases)
-![Node >= 20](https://img.shields.io/badge/node-%3E%3D20-339933)
-![Zero dependencies](https://img.shields.io/badge/runtime%20dependencies-0-brightgreen)
+<p align="center">
+  <a href="https://github.com/celaldrg/lockdiff/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/celaldrg/lockdiff/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
+  <a href="https://github.com/celaldrg/lockdiff/releases"><img alt="Release" src="https://img.shields.io/github/v/release/celaldrg/lockdiff?sort=semver"></a>
+  <img alt="Node >= 20" src="https://img.shields.io/badge/node-%3E%3D20-339933">
+  <img alt="Zero dependencies" src="https://img.shields.io/badge/runtime%20dependencies-0-brightgreen">
+</p>
 
 **Readable diffs for lockfiles.** A dependency update PR changes 3,000 lines of `package-lock.json` and nobody reviews it.
 `lockdiff` turns that into the list a reviewer actually needs: what was **upgraded, downgraded, added and removed**,
@@ -13,7 +17,17 @@ with **major bumps flagged first**.
 One tool for ten lockfile formats: `package-lock.json`, `npm-shrinkwrap.json`, `pnpm-lock.yaml`, `yarn.lock` (classic and Berry),
 `Cargo.lock`, `go.sum`, `poetry.lock`, `uv.lock`, `Pipfile.lock`, `composer.lock` and `Gemfile.lock`.
 
+<p align="center">
+  <img src="assets/terminal-demo.webp" alt="lockdiff, real terminal output" width="860">
+  <br><sub>Real output: <code>lockdiff 14.0.0 14.1.1</code> in a clone of <a href="https://github.com/BurntSushi/ripgrep">ripgrep</a>.</sub>
+</p>
+
 ## Example
+
+<p align="center">
+  <img src="assets/demo.gif" alt="lockdiff running in a terminal" width="860">
+  <br><sub>Recorded with <a href="https://github.com/charmbracelet/vhs">vhs</a>.</sub>
+</p>
 
 Real output for [ripgrep](https://github.com/BurntSushi/ripgrep) between tags `14.0.0` and `14.1.1`
 (the full list has 53 rows; some are cut here for space):
